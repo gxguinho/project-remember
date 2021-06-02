@@ -3,7 +3,7 @@ import {useFonts,Jost_700Bold,Jost_500Medium,Jost_400Regular} from '@expo-google
 import AppLoading from 'expo-app-loading';
 import {StatusBar} from 'expo-status-bar'
 
-import DayConfirmation from './src/pages/Nome';
+import Index from './src/App';
 
 export default function App(){
   const [fontsLoaded] = useFonts({Jost_700Bold,Jost_500Medium,Jost_400Regular})
@@ -14,7 +14,7 @@ export default function App(){
   return (
     <>
     <StatusBar backgroundColor='#43008A' style='light' translucent={true} />
-    <DayConfirmation/>
+    <Index/>
     </>
   );
 };

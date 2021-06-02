@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {View,Text,Image,TouchableOpacity,Platform } from 'react-native';
 import DateTimePicker,{Event} from '@react-native-community/datetimepicker';
 import {format} from 'date-fns';
+import { useNavigation } from '@react-navigation/core';
 
 import { styles } from './styles';
 import {Button} from '../../components/Button';
@@ -9,6 +10,7 @@ import {Button} from '../../components/Button';
 import backgroundNight from '../../assets/backgroundNight.png';
 
 const NightConfirmation: React.FC = () => {
+  const navigation  = useNavigation()
   const [selectedDateTime, setSelectedDateTime ] = useState(new Date())
   const [showDatePicker, setShowDatePicker] = useState(Platform.OS == 'ios')
   
@@ -41,7 +43,7 @@ const NightConfirmation: React.FC = () => {
           }
           
     
-        <Button title='Confirmar' />
+        <Button title='Confirmar' onPress={()=>navigation.navigate("Name")}/>
       </View>
     </View>
   )

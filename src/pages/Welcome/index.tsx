@@ -19,7 +19,7 @@ const Welcome: React.FC = () => {
       <Image source={Logo} style={styles.image} resizeMode='contain' />
       <Text style={styles.text}>Remember irá te auxiliar em{'\n'}
             suas tarefas diáras... Te lembrando delas. 😍</Text>
-      <MiniButton/>
+      <MiniButton  nextScreen='DayConfirmation' />
     </View>
   );
 };

@@ -5,11 +5,12 @@ import {format} from 'date-fns'
 
 import { styles } from './styles';
 import {Button} from '../../components/Button';
+import { useNavigation } from '@react-navigation/core';
 
 import backgroundDay from '../../assets/backgroundDay1.png';
 
 const DayConfirmation: React.FC = () => {
-  
+  const navigation  = useNavigation()
   const [selectedDateTime, setSelectedDateTime ] = useState(new Date())
   const [showDatePicker, setShowDatePicker] = useState(Platform.OS == 'ios')
   
@@ -42,7 +43,7 @@ const DayConfirmation: React.FC = () => {
           }
           
     
-        <Button title='Confirmar' />
+        <Button title='Confirmar'  onPress={()=>navigation.navigate("NightConfirmation")}/>
       </View>
     </View>
   );
